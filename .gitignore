@@ -1,0 +1,4 @@
+data/certbot
+.vscode/
+.idea/
+.DS_Store

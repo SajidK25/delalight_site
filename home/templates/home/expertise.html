@@ -1,0 +1,42 @@
+{% extends 'home/base.html' %}
+{% block content %}
+
+	<body>
+
+		<div class="body">
+			<div role="main" class="main">
+
+				<section class="page-header page-header-modern bg-color-quaternary page-header-md custom-page-header">
+					<div class="container">
+						<div class="row mt-3">
+							<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+								<h1>Expertise</h1>
+								<span class="d-block text-4">What We Do</span>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="container">
+					<div class="row pt-1 pb-5 mb-3">
+						<div class="col">
+							{% for expertise in expertise %}
+							<div class="row mb-3">
+								<div class="col">
+									<div class="feature-box custom-feature-box custom-feature-box-active feature-box-style-2">
+										<div class="feature-box-info ms-3">
+											<h4 class="font-weight-normal text-5">{{expertise.title}}</h4>
+											<p>{{expertise.text | safe | truncatewords:32 }}</p>
+											<a href="{% url 'expertisedetail' expertise.pk %}">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+{% endblock %}

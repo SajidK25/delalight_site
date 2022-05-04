@@ -1,0 +1,218 @@
+{% extends 'home/base.html' %}
+{% block content %}
+
+	<body>
+
+		<div class="body">
+			<div role="main" class="main">
+
+				<section class="page-header page-header-modern bg-color-quaternary page-header-md custom-page-header">
+					<div class="container">
+						<div class="row mt-3">
+							<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+								<h1>Contact Us</h1>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="container">
+					<div class="row pt-1 pb-4 mb-3">
+						<div class="col-lg-8">
+
+							<h2 class="font-weight-bold text-color-dark">Send a Message</h2>
+
+							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+							<script>
+							  hbspt.forms.create({
+								region: "na1",
+								portalId: "21875489",
+								formId: "48cc76b0-946d-44ef-a1de-b55c9a99ebd3"
+							});
+							</script>
+						</div>
+						<div class="col-lg-4">
+
+							<div class="row mb-4">
+								<div class="col">
+									<div class="feature-box feature-box-style-2">
+										<div class="feature-box-icon mt-1">
+											<i class="icon-location-pin icons"></i>
+										</div>
+										<div class="feature-box-info">
+											<h2 class="font-weight-bold text-color-dark">Address</h2>
+											<p class="text-4">
+												Rochester, Minnesota 55901<br>
+												United States
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row mb-4">
+								<div class="col">
+									<div class="feature-box feature-box-style-2">
+										<div class="feature-box-icon mt-1">
+											<i class="icon-phone icons"></i>
+										</div>
+										<div class="feature-box-info">
+											<h2 class="font-weight-bold text-color-dark">Phone</h2>
+											<p class="text-4">
+												+507-319-7644 <br>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row mb-4">
+								<div class="col">
+									<div class="feature-box feature-box-style-2">
+										<div class="feature-box-icon mt-1">
+											<i class="icon-envelope icons"></i>
+										</div>
+										<div class="feature-box-info">
+											<h2 class="font-weight-bold text-color-dark">Email</h2>
+											<p class="text-4">
+												<a href="mailto:kalomassor@delalight.com" class="text-decoration-none">kalomassor@delalight.com</a><br>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br />
+				<br />
+				<!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
+				<!--<div id="googlemaps" class="google-map mt-4 mb-0"></div>-->
+
+			</div>
+		</div>
+
+		<!-- Vendor -->
+		{% load static %}
+		<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.appear/jquery.appear.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.cookie/jquery.cookie.min.js' %}"></script>
+		<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.validation/jquery.validate.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js' %}"></script>
+		<script src="{% static 'vendor/jquery.gmap/jquery.gmap.min.js' %}"></script>
+		<script src="{% static 'vendor/lazysizes/lazysizes.min.js' %}"></script>
+		<script src="{% static 'vendor/isotope/jquery.isotope.min.js' %}"></script>
+		<script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+		<script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+		<script src="{% static 'vendor/vide/jquery.vide.min.js' %}"></script>
+		<script src="{% static 'vendor/vivus/vivus.min.js' %}"></script>
+
+		<!-- Theme Base, Components and Settings -->
+		<script src="{% static 'js/theme.js' %}"></script>
+
+		<!-- Current Page Vendor and Views -->
+		<script src="{% static 'js/views/view.contact.js' %}"></script>
+
+		<!-- Theme Custom -->
+		<script src="{% static 'js/custom.js' %}"></script>
+
+		<!-- Theme Initialization Files -->
+		<script src="{% static 'js/theme.init.js' %}"></script>
+
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>-->
+		<!--<script>
+
+			/*
+			Map Settings
+
+				Find the Latitude and Longitude of your address:
+					- https://www.latlong.net/
+					- http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
+
+			*/
+
+			function initializeGoogleMaps() {
+				// Map Markers
+				var mapMarkers = [{
+					address: "New York, NY 10017",
+					html: "<strong>Porto Business Consulting</strong><br>123 Porto Blvd, Suite 100<br>New York, NY",
+					icon: {
+						image: "img/pin-light.png",
+						iconsize: [26, 46],
+						iconanchor: [12, 46]
+					},
+					popup: true
+				}];
+
+				// Map Initial Location
+				var initLatitude = 40.75198;
+				var initLongitude = -73.96978;
+
+				// Map Extended Settings
+				var mapSettings = {
+					controls: {
+						draggable: (($.browser.mobile) ? false : true),
+						panControl: true,
+						zoomControl: true,
+						mapTypeControl: true,
+						scaleControl: true,
+						streetViewControl: true,
+						overviewMapControl: true
+					},
+					scrollwheel: false,
+					markers: mapMarkers,
+					latitude: initLatitude,
+					longitude: initLongitude,
+					zoom: 16
+				};
+
+				var map = $('#googlemaps').gMap(mapSettings),
+					mapRef = $('#googlemaps').data('gMap.reference');
+
+				// Create an array of styles.
+				var mapColor = "#cfa968";
+
+				var styles = [{
+					stylers: [{
+						hue: mapColor
+					}]
+				}, {
+					featureType: "road",
+					elementType: "geometry",
+					stylers: [{
+						lightness: 0
+					}, {
+						visibility: "simplified"
+					}]
+				}, {
+					featureType: "road",
+					elementType: "labels",
+					stylers: [{
+						visibility: "off"
+					}]
+				}];
+
+				// Styles from https://snazzymaps.com/
+				var styles = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#090A0D"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#090A0D"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#090A0D"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#090A0D"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#090A0D"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#090A0D"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#090A0D"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#090A0D"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#090A0D"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#090A0D"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#090A0D"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#090A0D"},{"lightness":17}]}];
+
+				var styledMap = new google.maps.StyledMapType(styles, {
+					name: 'Styled Map'
+				});
+
+				mapRef.mapTypes.set('map_style', styledMap);
+				mapRef.setMapTypeId('map_style');
+			}
+
+			// Initialize Google Maps when element enter on browser view
+			theme.fn.intObs( '.google-map', 'initializeGoogleMaps()', {} );
+
+			// Map text-center At
+			var mapCenterAt = function(options, e) {
+				e.preventDefault();
+				$('#googlemaps').gMap("centerAt", options);
+			}
+
+		</script>-->
+
+	</body>
+{% endblock %}

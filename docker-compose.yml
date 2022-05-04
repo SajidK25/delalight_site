@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=delalight_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_HOST=127.0.0.1
+    ports:
+      - "5432:5432"
+    # volumes:
+    #   - ./data/postgres/data:/var/lib/postgresql/data
+
+  web:
+    build: .
+    restart: on-failure
+    volumes:
+      - .:/code
+    command: bash -c "python manage.py makemigrations home --noinput && python manage.py migrate --noinput && python manage.py initadmin && python3 manage.py runserver 0.0.0.0:8000 --settings=delalight_site.settings_local"
+    # command: bash -c "python manage.py makemigrations home --noinput && python manage.py migrate --noinput && python manage.py createsuperuser --noinput --username ${DJANGO_SUPERUSER_USERNAME} --email ${DJANGO_SUPERUSER_USERNAME} && python3 manage.py runserver 0.0.0.0:8000 --settings=delalight_site.settings_local"
+    # command: bash -c "python manage.py migrate --noinput && python3 manage.py runserver 0.0.0.0:8000 --settings=delalight_site.settings_local"
+  
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db

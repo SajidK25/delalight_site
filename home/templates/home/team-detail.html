@@ -1,0 +1,59 @@
+{% extends 'home/base.html' %}
+{% block content %}
+
+	<body>
+
+		<div class="body">
+
+			<div role="main" class="main">
+
+				<section class="page-header page-header-modern bg-color-quaternary page-header-md custom-page-header">
+					<div class="container">
+						<div class="row mt-3">
+							<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+								<h1>{{team.name}}</h1>
+								<span class="d-block text-4">{{team.title}}</span>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="container">
+					<div class="row pt-1 pb-4 mb-3">
+						<div class="col">
+
+							<div class="row mb-4">
+								<div class="col-md-3 text-center">
+									<div class="team-item">
+										<span class="image-wrapper">
+											<img src="{{team.image.url}}" alt="" class="img-fluid" />
+										</span>
+										<div class="team-infos">
+											<div class="share">
+												<i class="fas fa-share-alt"></i>
+												<div class="share-icons bg-color-light">
+													<a href="#" class="text-decoration-none" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+													<a href="#" class="text-decoration-none" title="Share on Instagram"><i class="fab fa-instagram"></i></a>
+													<a href="#" class="text-decoration-none" title="Share on Linkedin"><i class="fab fa-linkedin-in"></i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-9">
+									<h1 class="mt-0 mb-0">{{team.name}}</h1>
+									<p class="lead ms-4 pt-1">{{team.title}}</p>
+								</div>
+							</div>
+							<div class="row mt-4">
+								<div class="col">
+									<p>{{team.text}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'home/base.html' %}
+{% block content %}
+
+	<body>
+
+		<div class="body">
+
+			<div role="main" class="main">
+
+				<section class="page-header page-header-modern bg-color-quaternary page-header-md custom-page-header">
+					<div class="container">
+						<div class="row mt-3">
+							<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+								<h1>{{expertise.title}}</h1>
+							</div>
+							<div class="col-md-4 order-1 order-md-2 align-self-center">
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="container">
+					<div class="row pt-1 pb-4 mb-3">
+						<div class="col-lg-8">
+							<p class="clearfix">{{expertise.text}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	{% endblock %}

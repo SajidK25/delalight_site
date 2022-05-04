@@ -1,0 +1,59 @@
+{% extends 'home/base.html' %}
+{% block content %}
+
+	<body>
+
+		<div class="body">
+			<div role="main" class="main">
+
+				<section class="page-header page-header-modern bg-color-quaternary page-header-md custom-page-header">
+					<div class="container">
+						<div class="row mt-3">
+							<div class="col-md-8 order-2 order-md-1 align-self-center p-static">
+								<h1>Blog</h1>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="container">
+					<div class="row pt-1 pb-4 mb-3">
+						<div class="col">
+
+							<div class="row mt-2 mb-2">
+								<article class="blog-post">
+									<div class="col">
+										<div class="post-infos mb-4">
+											<span class="info posted-by">
+												Posted by:
+												<span class="post-author font-weight-semibold text-color-dark">
+													{{blog.name}}
+												</span>
+											</span>
+
+											<span class="info like ms-4">
+												Post Date: {{blog.date}}
+											</span>
+										</div>
+
+										<hr class="solid">
+
+										<p>{{blog.text}}</p>
+
+										<div class="pt-2 pb-1">
+											<!-- Go to www.addthis.com/dashboard to customize your tools -->
+											<div class="addthis_inline_share_toolbox"></div>
+											<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60ba220dbab331b0"></script>
+										</div>
+									</div>
+								</article>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+{% endblock %}
+
