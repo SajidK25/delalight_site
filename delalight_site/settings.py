@@ -27,11 +27,11 @@ SECRET_KEY = 'django-insecure-65j8v-vw(&1c)(v9**#xb8pitf14eb%3c=u@5^g&$=lp#)9rn1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['165.22.105.10','137.184.250.14','t99tld.com']
+ALLOWED_HOSTS = ['147.182.213.203','143.244.214.224','delalight.com']
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
-    ('admin', 'admin@mysite.com'),
+    ('admin', 'admin@delalight.com'),
 )
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 # Application definition
