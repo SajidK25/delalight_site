@@ -25,7 +25,7 @@ REPOSITORY_ROOT = os.path.dirname(BASE_DIR)
 SECRET_KEY = 'django-insecure-65j8v-vw(&1c)(v9**#xb8pitf14eb%3c=u@5^g&$=lp#)9rn1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['147.182.213.203','143.244.214.224','delalight.com']
 

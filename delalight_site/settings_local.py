@@ -2,5 +2,5 @@
 from delalight_site.settings import *
 
 # no debug for us
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
