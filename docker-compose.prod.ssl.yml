@@ -20,8 +20,8 @@ services:
       - ./data/nginx/conf_ssl.d:/etc/nginx/conf.d
       - ./data/certbot/conf:/etc/letsencrypt
       - ./data/certbot/www:/var/www/certbot 
-      - ./home/static:/static
-      - ./uploads:/media
+      - ./static:/static
+      - ./media:/media
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
     ports:
       - "80:80"
