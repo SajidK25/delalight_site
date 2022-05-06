@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['147.182.213.203','143.244.214.224','delalight.com']
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
-    ('admin', 'admin@delalight.com'),
+    ('admin', 'kalomassor@delalight.com'),
 )
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 # Application definition
