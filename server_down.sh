@@ -3,7 +3,7 @@ read -p "Do you really want to remove all existing containers, images, volumes a
   if [ "$decision" != "Y" ] && [ "$decision" != "y" ]; then
     exit
   fi
-docker-compose down
+docker-compose  -f docker-compose.prod.ssl.yml down
 sleep 5
 docker rmi $(docker images -q) -f
 sleep 10
