@@ -50,8 +50,8 @@ services:
                       python manage.py migrate --noinput && 
                       python manage.py initadmin && 
                       python manage.py collectstatic && 
-                      gunicorn delalight_site.wsgi:application --bind 0.0.0.0:8000"
+                      gunicorn delalight_site.wsgi:application --bind 0.0.0.0:443"
     ports:
-      - "8000:8000"
+      - "443"
     depends_on:
       - db
